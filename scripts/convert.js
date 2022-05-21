@@ -37,11 +37,25 @@ csv()
       //normalizing age
       let age = '00'; // nao comeca com 4, nem com 5 (100+anos), morreu antes de ter 1 ano
       const ageInfo = death['IDADE'];
-
+      let age_group = '0-10';
       if (ageInfo.split('')[0] === '4') {
         age = ageInfo.split('')[1] + ageInfo.split('')[2];
+        const intAge = Number(age);
+        if (intAge <= 10) {
+          age_group = '0-10';
+        } else if (intAge > 10 && intAge <= 20) {
+          age_group = '11-20';
+        } else if (intAge > 20 && intAge <= 40) {
+          age_group = '21-40';
+        } else if (intAge > 40 && intAge <= 60) {
+          age_group = '40-60';
+        } else if (intAge > 60) {
+          age_group = '60<';
+        }
+
       } else if (ageInfo.split('')[0] === '5') {
         age = '1' + ageInfo.split('')[1] + ageInfo.split('')[2];
+        age_group = '60<';
       }
 
       //normalizing sex
@@ -114,6 +128,7 @@ csv()
         month,
         year,
         age,
+        age_group,
         sex,
         uf_name,
         uf_code,

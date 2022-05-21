@@ -1,3 +1,4 @@
+//  FEITO PRA CONVERTER O CID EM UM JSON, JA CONVERTIDO. NÃO PRECISA MEXER
 require('dotenv').config();
 
 const xlsxj = require('xlsx-to-json');

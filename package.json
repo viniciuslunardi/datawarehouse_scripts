@@ -1,0 +1,24 @@
+{
+  "name": "datawarehouse_scrips",
+  "version": "0.0.1",
+  "description": "scripts para converter datos CSV advindos do datasus em XLSX normalizados para popularmos um bando de dados de datawarehouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciuslunardi/datawarehouse_scrips.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciuslunardi/datawarehouse_scrips/issues"
+  },
+  "homepage": "https://github.com/viniciuslunardi/datawarehouse_scrips#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "json2xls": "^0.1.2",
+    "xlsx-to-json": "^0.3.0"
+  }
+}

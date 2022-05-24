@@ -22,4 +22,6 @@ $ node scripts/convert.js
 * Codigos do mun: https://www.ibge.gov.br/explica/codigos-dos-municipios.php
 * Conversor de DBC para CSV: https://github.com/greatjapa/dbc2csv
 * Informações dos óbtos e documentação https://datasus.saude.gov.br/transferencia-de-arquivos/#
+* Categorias CAUSABAS http://tabnet.datasus.gov.br/cgi/sih/mxcid10lm.htm
+
 

@@ -71,10 +71,10 @@ csv()
       const cityInfo = death['CODMUNOCOR'];
       const cityNormalized = cities.filter(el => el.mun_code === cityInfo);
 
-      let uf_name = 'N/A';
-      let uf_code = 'N/A';
-      let city_name = 'N/A';
-      let city_code = 'N/A';
+      let uf_name = '';
+      let uf_code = '';
+      let city_name = '';
+      let city_code = '';
 
       if (cityNormalized && cityNormalized.length) {
         uf_name = cityNormalized[0].uf_name
@@ -87,8 +87,8 @@ csv()
       const causeInfo = death['CAUSABAS'];
       const causeNormalized = cid10.filter(el => el && el.code_cid === causeInfo);
 
-      let death_cause_code = 'N/A';
-      let death_cause_desc = 'N/A';
+      let death_cause_code = '';
+      let death_cause_desc = '';
 
       if (causeNormalized && causeNormalized.length) {
         death_cause_code = causeNormalized[0].code_cid
@@ -97,7 +97,7 @@ csv()
 
       //normalizing circumstance
       const circumstanceInfo = death['CIRCOBITO'];
-      let circumstance = 'N/A';
+      let circumstance = '';
 
       if (circumstanceInfo === '9') {
         circumstance = 'Ignorado'
@@ -113,7 +113,7 @@ csv()
       }
 
       const workInfo = death['ACIDTRAB'];
-      let workAccident = 'N/A';
+      let workAccident = '';
 
       if (workInfo === '9') {
         workAccident = 'Ignorado'

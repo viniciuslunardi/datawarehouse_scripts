@@ -89,10 +89,12 @@ csv()
 
       let death_cause_code = '';
       let death_cause_desc = '';
+      let death_cause_category = '';
 
       if (causeNormalized && causeNormalized.length) {
         death_cause_code = causeNormalized[0].code_cid
         death_cause_desc = causeNormalized[0].desc_cid
+        death_cause_category = causeNormalized[0].cid_category
       }
 
       //normalizing circumstance
@@ -124,20 +126,21 @@ csv()
       }
 
       data.push({
-        day,
-        month,
-        year,
-        age,
-        age_group,
-        sex,
-        uf_name,
-        uf_code,
-        city_name,
-        city_code,
-        death_cause_code,
-        death_cause_desc,
-        circumstance,
-        workAccident
+        'DIA': day,
+        'MES': month,
+        'ANO': year,
+        'IDADE': age,
+        'FAIXA_ETARIA': age_group,
+        'SEXO': sex,
+        'UF': uf_name,
+        'COD_UF': uf_code,
+        'MUNICIPIO': city_name,
+        'COD_MUNICIPIO': city_code,
+        'CAUSABAS': death_cause_code,
+        'CAUSABAS_CATEG': death_cause_category,
+        'CAUSABAS_DESC': death_cause_desc,
+        'CIRCOBITO': circumstance,
+        'ACIDTRAB': workAccident
       });
 
     }
